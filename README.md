@@ -1,29 +1,70 @@
-# Create T3 App
+🎯Form Builder
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+A modern, intuitive drag-and-drop form builder that creates horizontal layouts with smart component grouping.
 
-## What's next? How do I make an app with this?
+✨ Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+🎨 Smart Layout System
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Dynamic Width: Single components take full width, pairs share 50/50 layout
+Horizontal Groups: Organize components in side-by-side arrangements
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+🔄 Advanced Drag & Drop
 
-## Learn More
+Intelligent Swapping: Drop components on full groups to automatically swap
+Cross-Group Movement: Drag components between any groups seamlessly
+Within-Group Reordering: Rearrange components within the same group
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+🚀 Quick Start
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Prerequisites
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+Node.js 18+
+Supabase database
+npm or yarn
 
-## How do I deploy this?
+# Install dependencies
+npm install
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+# Set up environment variables
+cp .env
+
+# Set up the database
+npx prisma db push
+
+# Start the development server
+npm run dev
+
+Visit http://localhost:3000 to see your application.
+
+Environment Setup
+Configure your .env file:
+# Database
+DATABASE_URL=""
+
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=""
+NEXT_PUBLIC_SUPABASE_ANON_KEY=""
+
+🏗️ Tech Stack
+
+Frontend: Next.js 14, React 18, TypeScript
+Backend: tRPC, Prisma ORM
+Database: PostgreSQL
+Styling: Tailwind CSS
+Drag & Drop: react-beautiful-dnd
+
+🎮 How to Use
+Building Forms
+
+Add Components: Use the "Add Component" form to create new form elements
+Organize Groups: Each new component gets its own group initially
+Create Layouts: Drag components between groups to create horizontal pairs
+Preview Form: See real-time preview of your form layout
+
+Managing Groups
+
+Single Component: Takes full width in the form preview
+Two Components: Share 50/50 width side by side
+Empty Groups: Click "+ New Group" to create drop zones
+Smart Swapping: Drop on full groups to swap components automatically
